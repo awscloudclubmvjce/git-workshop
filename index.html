@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git & GitHub Workshop</title>
+  <meta name="description" content="A beginner-friendly, interactive Git and GitHub workshop presented as a slide deck." />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Progress bar -->
+<div id="progress-bar"></div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div id="nav-logo">git workshop</div>
+  <div id="slide-counter" title="Click to jump to a slide">1 / 1</div>
+  <div id="nav-right">
+    <button class="nav-btn" id="btn-fs" title="Fullscreen (F)">⛶</button>
+  </div>
+</nav>
+
+<!-- Click zones -->
+<div id="zone-prev" title="Previous slide"></div>
+<div id="zone-next" title="Next slide"></div>
+
+<!-- Slide deck -->
+<div id="deck"></div>
+
+<!-- Arrow buttons -->
+<div id="nav-arrows">
+  <button class="arrow-btn" id="btn-prev" title="Previous (←)" disabled>←</button>
+  <button class="arrow-btn" id="btn-next" title="Next (→ / Space)">→</button>
+</div>
+
+<!-- Keyboard hint -->
+<div id="kbd-hint">
+  <kbd>←</kbd><kbd>→</kbd> navigate &nbsp;·&nbsp;
+  <kbd>Space</kbd> next &nbsp;·&nbsp;
+  <kbd>G</kbd> jump &nbsp;·&nbsp;
+  <kbd>F</kbd> fullscreen
+</div>
+
+<!-- Jump dialog -->
+<div id="jump-dialog">
+  <div id="jump-box">
+    <h3>Jump to slide</h3>
+    <input id="jump-input" type="number" min="1" placeholder="slide #" />
+    <div id="jump-hint">Press Enter to go · Esc to cancel</div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script src="slides.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
