@@ -436,14 +436,16 @@ git push -u origin styling-feature`,
         emoji: "🙈",
         bullets: [
             "A file listing paths Git should <strong>ignore</strong>.",
-            "Never commit: <code>node_modules/</code>, <code>.env</code> (secrets), or build folders.",
-            "GitHub has templates: <a href='https://gitignore.io' target='_blank'>gitignore.io</a>",
+            "<strong>How to use it?</strong> Just create a file exactly named <code>.gitignore</code> and type the file names inside it.",
+            "For example, to ignore a file named <code>test.txt</code>, simply write <code>test.txt</code> on a new line inside.",
+            "<strong>Crucial step:</strong> You must <code>git add</code>, commit, and push the <code>.gitignore</code> file itself!",
+            "Never commit: <code>node_modules/</code>, <code>.env</code> (secrets), or build folders."
         ],
         code: `# .gitignore example
+test.txt
 node_modules/
 .env
-*.log
-.DS_Store`
+*.log`
     },
 
     // ── OPEN SOURCE ────────────────────────────────────
