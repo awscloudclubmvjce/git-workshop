@@ -67,7 +67,7 @@
         .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
       html += `<div class="code-block">
         <button class="copy-btn" data-code="${encodeURIComponent(slide.code)}">Copy</button>
-        <pre>${colorize(escaped)}</pre>
+        <pre>${escaped}</pre>
       </div>`;
     }
 
@@ -75,15 +75,7 @@
     return el;
   }
 
-  // ── Syntax colorize ────────────────────────────────────
-  function colorize(code) {
-    return code
-      .replace(/(#[^\n]*)/g, '<span class="cmt">$1</span>')
-      .replace(/\b(git|gh|ssh-keygen|ssh|cat|mkdir|cd|echo)\b/g, '<span class="cmd">$1</span>')
-      .replace(/(--[\w-]+|-[a-zA-Z])/g, '<span class="flag">$1</span>')
-      .replace(/"([^"]*)"/g, '<span class="str">"$1"</span>')
-      .replace(/(https?:\/\/[^\s<"]+)/g, '<span class="url">$1</span>');
-  }
+
 
   // ── Render all slides ──────────────────────────────────
   SLIDES.forEach((s, i) => {
@@ -108,9 +100,7 @@
 
   // ── Navigation ─────────────────────────────────────────
   function goto(idx, dir = 1) {
-    if (animating) return;
     if (idx < 0 || idx >= total) return;
-    animating = true;
 
     const prev = slideEls[current];
     const next = slideEls[idx];
@@ -134,8 +124,9 @@
     updateUI();
 
     setTimeout(() => {
-      prev.classList.remove('exit-left', 'exit-right');
-      animating = false;
+      if (!prev.classList.contains('active')) {
+        prev.classList.remove('exit-left', 'exit-right');
+      }
     }, 420);
   }
 
