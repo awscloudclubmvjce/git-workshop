@@ -3,7 +3,7 @@ const SLIDES = [
     {
         type: "cover", tag: "Welcome",
         title: "Git & GitHub Workshop",
-        subtitle: "From absolute zero to your first deployed website.",
+        subtitle: "From absolute zero.",
         emoji: "🚀",
         bullets: null, code: null
     },
@@ -29,6 +29,7 @@ const SLIDES = [
             "<strong>Lost work:</strong> \"I accidentally deleted my code from yesterday.\"",
             "<strong>Collaboration chaos:</strong> Emailing zip files like <code>project-final-FINAL2.zip</code>.",
             "<strong>\"It works on my machine\":</strong> Your code works for you, but not for your teammate.",
+            "<strong>Proof of Work:</strong> Your GitHub profile is your modern resume. Recruiters look at it to see your code."
         ]
     },
 
@@ -343,11 +344,11 @@ git push -u origin main`,
         title: "Why Branches Exist",
         subtitle: "Testing ideas safely in parallel timelines.",
         diagram: [
-            {label: "main", sub: "Stable Code", cls: "green"},
-            {arrow: "→ split branch →"},
-            {label: "feature", sub: "Your messy work", cls: "highlight"},
-            {arrow: "→ pull request → merge →"},
-            {label: "main", sub: "Updated & Safe", cls: "green"}
+            { label: "main", sub: "Stable Code", cls: "green" },
+            { arrow: "→ split branch →" },
+            { label: "feature", sub: "Your messy work", cls: "highlight" },
+            { arrow: "→ pull request → merge →" },
+            { label: "main", sub: "Updated & Safe", cls: "green" }
         ]
     },
 
@@ -402,11 +403,11 @@ git push -u origin styling-feature`,
         type: "diagram", tag: "Mapping",
         title: "Terminal to UI Mapping",
         diagram: [
-            {label: "git add", sub: "Click the ➕ icon next to a file", cls: ""},
-            {arrow: "→"},
-            {label: "git commit", sub: "Type message in the box & click 'Commit'", cls: "highlight"},
-            {arrow: "→"},
-            {label: "git push", sub: "Click 'Sync Changes' button", cls: "green"}
+            { label: "git add", sub: "Click the ➕ icon next to a file", cls: "" },
+            { arrow: "→" },
+            { label: "git commit", sub: "Type message in the box & click 'Commit'", cls: "highlight" },
+            { arrow: "→" },
+            { label: "git push", sub: "Click 'Sync Changes' button", cls: "green" }
         ]
     },
 
@@ -483,13 +484,13 @@ node_modules/
         type: "diagram", tag: "Open source loop",
         title: "How do I contribute?",
         diagram: [
-            {label: "Fork repo", sub: "on GitHub", cls: ""},
-            {arrow: "→"},
-            {label: "Clone fork", sub: "to your PC", cls: "highlight"},
-            {arrow: "→"},
-            {label: "Make changes", sub: "branch + commit", cls: "green"},
-            {arrow: "→"},
-            {label: "Open PR", sub: "to original repo", cls: "purple"}
+            { label: "Fork repo", sub: "on GitHub", cls: "" },
+            { arrow: "→" },
+            { label: "Clone fork", sub: "to your PC", cls: "highlight" },
+            { arrow: "→" },
+            { label: "Make changes", sub: "branch + commit", cls: "green" },
+            { arrow: "→" },
+            { label: "Open PR", sub: "to original repo", cls: "purple" }
         ]
     },
 
@@ -687,6 +688,25 @@ git stash                # Save WIP`,
         title: "You are now using Git & GitHub.",
         emoji: "🌟",
         subtitle: "Keep practicing. Every expert was once a beginner who typed git status and had no idea what it meant.",
+        bullets: null, code: null
+    },
+    {
+        type: "cover", tag: "About Me",
+        title: "Hi, I'm Srikar!",
+        emoji: "👋",
+        subtitle: `<img src="srikar-search.png" alt="Google Search Srikar T MVJ" style="max-height: 250px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"><br><br>
+        Learn more about my work and projects on my portfolio:<br>
+        <a href="https://srikar.pages.dev/" target="_blank" style="color: var(--accent); font-weight: bold;">https://srikar.pages.dev/</a>`,
+        bullets: null, code: null
+    },
+
+    {
+        type: "cover", tag: "Community",
+        title: "Join the AWS Student Builder Group",
+        emoji: "☁️",
+        subtitle: `<img src="aws-insta-qr.png" alt="Instagram QR Code" style="max-height: 380px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);"><br><br>
+        Follow us on Instagram: <br>
+        <a href="https://www.instagram.com/awsstudentbuildergroup.mvjce" target="_blank" style="color: var(--accent); font-weight: bold;">@awsstudentbuildergroup.mvjce</a>`,
         bullets: null, code: null
     }
 ];
