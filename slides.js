@@ -64,6 +64,15 @@ const SLIDES = [
     },
 
     {
+        type: "cover", tag: "The Creator",
+        title: "Linus Torvalds",
+        emoji: "👑",
+        subtitle: `<img src="linus.png" alt="Linus Torvalds" style="max-height: 400px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">`,
+        bullets: null, code: null,
+        oneTime: true
+    },
+
+    {
         type: "concept", tag: "Comparison",
         title: "Distributed vs Centralized",
         emoji: "🕸️",

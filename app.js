@@ -23,6 +23,7 @@
     el.className = 'slide';
     el.setAttribute('data-type', slide.type);
     el.setAttribute('data-index', idx);
+    if (slide.oneTime) el.setAttribute('data-onetime', 'true');
 
     let html = '';
 
@@ -102,7 +103,15 @@
   function goto(idx, dir = 1) {
     if (idx < 0 || idx >= total) return;
 
+    if (slideEls[idx].hasAttribute('data-used')) {
+      return goto(idx + dir, dir);
+    }
+
     const prev = slideEls[current];
+    if (prev && prev.hasAttribute('data-onetime')) {
+      prev.setAttribute('data-used', 'true');
+    }
+
     const next = slideEls[idx];
 
     prev.classList.remove('active');
